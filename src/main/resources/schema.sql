@@ -1,4 +1,8 @@
 /*
+ The content is taken from https://github.com/spring-projects/spring-authorization-server/blob/main/oauth2-authorization-server/src/main/resources/org/springframework/security/oauth2/server/authorization/oauth2-authorization-schema.sql
+ */
+
+/*
 IMPORTANT:
     If using PostgreSQL, update ALL columns defined with 'blob' to 'text',
     as PostgreSQL does not support the 'blob' data type.
