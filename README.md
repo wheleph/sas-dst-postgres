@@ -1,3 +1,10 @@
+## Intro
+
+Sample code for the Spring Authorization Server issue
+[Daylight Saving Time issue in JdbcOAuth2AuthorizationService when using PostgreSQL #2203](https://github.com/spring-projects/spring-authorization-server/issues/2203).
+
+## Howto
+
 Run the service:
 
 ```
@@ -5,14 +12,14 @@ Run the service:
 ```
 
 Trigger the endpoint that creates a dummy authorization record with access token issue time
-just before the DST change:
+just before the DST transition:
 
 ```
-curl localhost:8080/store-and-rea
+curl localhost:8080/store-and-read
 ```
 
-This endpoint stored the record in Postgres and then tries to read it from the database. 
-But the read operation fails with this exception:
+This endpoint stored the record in Postgres and then tries to read it back from the database. 
+But the read operation fails with the following exception:
 
 ```
 2025-09-20T15:20:23.594+03:00 ERROR 72820 --- [nio-8080-exec-1] com.example.controller.TestController    : Error when find oauth2 authorization with id bf532958-242b-4076-ad30-81c35b48ffa5
