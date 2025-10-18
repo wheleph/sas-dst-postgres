@@ -3,6 +3,8 @@
 Sample code for the Spring Authorization Server issue
 [Daylight Saving Time issue in JdbcOAuth2AuthorizationService when using PostgreSQL #2203](https://github.com/spring-projects/spring-authorization-server/issues/2203).
 
+There's a similar issue with MySQL as well. The sample code is in branch "mysql" of this repo.
+
 ## Howto
 
 Run the service:
