@@ -18,7 +18,7 @@ just before the DST transition:
 curl localhost:8080/store-and-read
 ```
 
-This endpoint stored the record in Postgres and then tries to read it back from the database. 
+This endpoint stores the record in Postgres and then tries to read it back from the database. 
 But the read operation fails with the following exception:
 
 ```
