@@ -1,9 +1,15 @@
 services:
   db:
-    image: postgres:15.10
+    image: mysql:9.3.0
     ports:
-      - 15432:5432
+      - 13306:3306
     environment:
-      POSTGRES_DB: demo
-      POSTGRES_USER: user
-      POSTGRES_PASSWORD: s3cret
+      MYSQL_ROOT_PASSWORD: ""
+      MYSQL_DATABASE: ssia-ch14-ex1
+      MYSQL_ALLOW_EMPTY_PASSWORD: true
+    healthcheck:
+      # “mysqladmin ping” will return 0 only once MySQL is up and accepting connections
+      test: [ "CMD", "mysqladmin", "ping", "--silent" ]
+      interval: 5s
+      timeout: 5s
+      retries: 20
